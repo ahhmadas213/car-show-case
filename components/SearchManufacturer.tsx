@@ -10,9 +10,7 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }
   
   : serchManuFacturerProps) => {
   const [query, setQuery] = useState("")
-  const filteredManufacturer = query === ""
-    ? manufacturers
-    : manufacturers.filter((item) => (
+  const filteredManufacturer = query === ""? manufacturers: manufacturers.filter((item) => (
       item.toLocaleLowerCase()
         .replace(/\s+/g, "").includes(query.toLocaleLowerCase().replace(/\s+/g, ""))
     ))
